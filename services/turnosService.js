@@ -5,7 +5,7 @@
 // ===================== REGLA DE NEGOCIO DEL EQUIPO =====================
 // N = número de lista oficial del primer integrante del equipo
 //     (integrantes ordenados alfabéticamente por apellido).
-// ⚠️ Ajustar este valor según los integrantes reales del equipo.
+// Equipo: Argüello (#3), Guerrero (#8), Osorio (#15) -> primero: Argüello -> N = 3
 const N = 3;
 const PORCENTAJE_RECARGO = N * 2; // porcentajeRecargo = N × 2%
 // ========================================================================

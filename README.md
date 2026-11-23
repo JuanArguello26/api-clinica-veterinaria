@@ -7,17 +7,15 @@ API REST construida con **Node.js + Express** y organizada por capas (`routes`, 
 
 ## 👥 Integrantes (ordenados alfabéticamente por apellido)
 
-| # Lista oficial | Nombre completo |
-|:---:|---|
-| _X_ | _Apellido Apellido Nombre_ |
-| _X_ | _Apellido Apellido Nombre_ |
-| _X_ | _Apellido Apellido Nombre_ |
-
-> ⚠️ Completar con los datos reales del equipo.
+| # Lista oficial | Nombre completo | Grupo |
+|:---:|---|---|
+| 3 | Argüello Botero Juan Esteban | Jueves |
+| 8 | Guerrero Rey Brandon Jose | Miércoles |
+| 15 | Osorio Morales Brayan Alexander | Miércoles |
 
 ## 🔢 Parámetro N y porcentaje de recargo
 
-- **N = 3** → número de lista oficial del primer integrante del equipo (en orden alfabético por apellido).
+- **N = 3** → al ordenar por apellido (Argüello, Guerrero, Osorio), el primer integrante es **Argüello Botero Juan Esteban**, que ocupa el puesto **#3** en el listado oficial.
 - **porcentajeRecargo = N × 2% = 3 × 2% = 6%**
 
 El valor se define en `services/turnosService.js` (constante `N`).
