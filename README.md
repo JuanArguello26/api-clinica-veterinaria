@@ -52,7 +52,7 @@ Campos que **calcula el servidor**: `id`, `porcentajeRecargo`, `totalPagar`, `cr
 ## 🧱 Arquitectura por capas
 
 ```
-api-veterinaria/
+api-clinica-veterinaria/
 ├── index.js                      # Inicia Express, middlewares, conecta rutas y levanta el servidor
 ├── routes/
 │   └── turnosRoutes.js           # Solo define los endpoints y su controlador
@@ -102,19 +102,50 @@ Si prioritario = false o no se envía:
 
 ---
 
-## 🚀 Instalación y ejecución
+## 🚀 Instalación y ejecución (Windows, Mac y Linux)
 
-Requisitos: Node.js 18 o superior.
+### 1. Instalar Node.js (una sola vez)
+
+Descargar la versión **LTS** desde [nodejs.org](https://nodejs.org) e instalarla.
+Para comprobar, abrir una terminal **nueva** y ejecutar `node -v` (debe mostrar `v18` o superior).
+
+### 2. Descargar el proyecto
+
+- **Sin Git:** en este repositorio, botón verde **Code → Download ZIP**, y descomprimir.
+- **Con Git:**
+  ```bash
+  git clone https://github.com/JuanArguello26/api-clinica-veterinaria.git
+  ```
+  (Windows: instalar Git desde [git-scm.com](https://git-scm.com). Mac: la primera vez que se usa `git`, el sistema ofrece instalarlo).
+
+### 3. Abrir una terminal en la carpeta del proyecto
+
+| Sistema | Cómo |
+|---|---|
+| **Windows** | Abrir la carpeta en el Explorador, escribir `powershell` en la barra de direcciones y presionar Enter |
+| **Mac** | Clic derecho en la carpeta → **Servicios → Nueva terminal en la carpeta** (o en Terminal: `cd ` + arrastrar la carpeta) |
+| **Cualquiera** | Abrir la carpeta en VS Code → menú **Terminal → New Terminal** |
+
+### 4. Instalar dependencias y arrancar (mismos comandos en todos los sistemas)
 
 ```bash
-git clone <URL-del-repositorio>
-cd api-veterinaria
 npm install
 npm start
 ```
 
-El servidor queda en `http://localhost:3000`.
-(`npm run dev` lo reinicia automáticamente al guardar cambios.)
+Cuando aparezca `escuchando en http://localhost:3000`, abrir **http://localhost:3000** en el navegador.
+Para detener el servidor: **Ctrl + C** en la terminal (también en Mac).
+`npm run dev` reinicia el servidor automáticamente al guardar cambios.
+
+### Problemas comunes
+
+| Problema | Windows | Mac / Linux |
+|---|---|---|
+| Aparece una ventana del Firewall al arrancar | Clic en **Permitir** (si se cancela, localhost sigue funcionando) | No aplica |
+| `npm` no se reconoce como comando | Cerrar y abrir la terminal, o reiniciar el PC tras instalar Node | Cerrar y abrir la terminal |
+| PowerShell: "la ejecución de scripts está deshabilitada" | Usar **cmd**, o ejecutar `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` | No aplica |
+| `Cannot find module 'express'` | Falta `npm install` | Falta `npm install` |
+| `EADDRINUSE` (puerto 3000 ocupado) | `$env:PORT=3001; npm start` → abrir `localhost:3001` | `PORT=3001 npm start` → abrir `localhost:3001` |
 
 ---
 
