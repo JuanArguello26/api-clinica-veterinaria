@@ -1,4 +1,4 @@
-# 🐾 API REST – Clínica Veterinaria "Huellitas"
+# 🐾 API REST – Clínica Veterinaria "Full Dog"
 
 Trabajo final – **Arquitectura Cliente/Servidor** – CIAF, Ingeniería de Software.
 API REST construida con **Node.js + Express** y organizada por capas (`routes`, `controllers`, `services`).
@@ -15,7 +15,7 @@ API REST construida con **Node.js + Express** y organizada por capas (`routes`, 
 
 ## 🔢 Parámetro N y porcentaje de recargo
 
-- **N = 3** → al ordenar por apellido (Argüello, Guerrero, Osorio), el primer integrante es **Argüello Botero Juan Esteban**, que ocupa el puesto **#3** en el listado oficial.
+- **N = 3** → al ordenar por apellido (Argüello, Guerrero, Osorio), el primer integrante es **Argüello Botero Juan Esteban**, que ocupa el puesto **#3** en el listado oficial del grupo jueves (equipo mixto miércoles/jueves, validado con el docente).
 - **porcentajeRecargo = N × 2% = 3 × 2% = 6%**
 
 El valor se define en `services/turnosService.js` (constante `N`).
@@ -24,7 +24,7 @@ El valor se define en `services/turnosService.js` (constante `N`).
 
 ## 🏥 Descripción del negocio
 
-**Clínica Veterinaria Huellitas** es una clínica que ofrece servicios de salud para mascotas
+**Full Dog** es una clínica veterinaria que ofrece servicios de salud para mascotas
 (perros, gatos y otras especies): consulta general, vacunación, desparasitación, baño y peluquería,
 cirugías menores y atención de urgencias.
 
