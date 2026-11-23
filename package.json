@@ -1,0 +1,17 @@
+{
+  "name": "api-clinica-veterinaria",
+  "version": "1.0.0",
+  "description": "API REST por capas para gestión de turnos de una clínica veterinaria",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^4.22.3"
+  }
+}

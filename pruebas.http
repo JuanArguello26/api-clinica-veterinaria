@@ -1,0 +1,51 @@
+### Variables
+@url = http://localhost:3000/api/turnos
+
+### 1) POST prioritario -> 201 (aplica recargo)
+POST {{url}}
+Content-Type: application/json
+
+{
+  "nombreCliente": "Laura Gómez",
+  "nombreMascota": "Max",
+  "especie": "Perro",
+  "tipoServicio": "Consulta de urgencia",
+  "fechaHora": "2026-11-26T10:30",
+  "precioBase": 80000,
+  "prioritario": true
+}
+
+### 2) POST normal -> 201 (sin recargo)
+POST {{url}}
+Content-Type: application/json
+
+{
+  "nombreCliente": "Carlos Ruiz",
+  "nombreMascota": "Misha",
+  "especie": "Gato",
+  "tipoServicio": "Vacunación",
+  "fechaHora": "2026-11-27T15:00",
+  "precioBase": 45000
+}
+
+### 3) POST con errores -> 400
+POST {{url}}
+Content-Type: application/json
+
+{
+  "nombreCliente": "Ana Torres",
+  "especie": "Perro",
+  "tipoServicio": "Baño",
+  "fechaHora": "2026-11-28T09:00",
+  "precioBase": -5000,
+  "prioritario": "si"
+}
+
+### 4) GET todos -> 200
+GET {{url}}
+
+### 5) GET por id -> 200
+GET {{url}}/1
+
+### 6) GET id inexistente -> 404
+GET {{url}}/99
