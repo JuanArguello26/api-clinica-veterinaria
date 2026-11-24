@@ -227,7 +227,7 @@
 
     function setEstado(online) {
       $('#dot').className = 'dot ' + (online ? 'on' : 'off');
-      $('#statusText').textContent = online ? 'Servidor en línea' : 'Servidor desconectado';
+      $('#statusText').textContent = online ? `Servidor en línea · ${window.location.host}` : 'Servidor desconectado';
     }
 
     function toast(tipo, titulo, texto) {

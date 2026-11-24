@@ -62,9 +62,11 @@ api-clinica-veterinaria/
 │   └── turnosService.js          # Lógica de negocio: cálculo con N y datos en memoria
 ├── public/
 │   └── index.html                # Cliente web (formulario + tabla) que consume la API con fetch
+├── tests/
+│   └── turnos.test.js            # Pruebas automatizadas (unitarias e integración con node:test)
 ├── pruebas.http                  # Peticiones de prueba (extensión REST Client de VS Code)
 ├── package.json
-└── .gitignore                    # Excluye node_modules
+└── .gitignore                    # Excluye node_modules, .env y .DS_Store
 ```
 
 **Flujo de una petición:**
@@ -229,6 +231,7 @@ Devuelve un arreglo con todos los turnos registrados (`[]` si aún no hay ningun
 
 ## 🧪 Cómo probar
 
+- **Pruebas automatizadas:** ejecutar `npm test` en la terminal (corre las pruebas unitarias y de integración con `node:test`, validando `N = 3`, el recargo del 6 % y los códigos `200`, `201`, `400` y `404`).
 - **Cliente web:** abrir `http://localhost:3000` en el navegador. Desde ahí se pueden crear turnos (201 / 400), listar todos (200) y buscar por id (200 / 404). La página solo consume la API con `fetch`; toda la lógica sigue en el servidor.
 - **VS Code + REST Client:** abrir `pruebas.http` y pulsar *Send Request* sobre cada petición.
 - **Postman / Thunder Client:** usar los JSON de arriba con `Content-Type: application/json`.
