@@ -49,3 +49,25 @@ GET {{url}}/1
 
 ### 6) GET id inexistente -> 404
 GET {{url}}/99
+
+### 7) POST con precioBase en cero y fecha inválida -> 400
+POST {{url}}
+Content-Type: application/json
+
+{
+  "nombreCliente": "Pedro Díaz",
+  "nombreMascota": "Toby",
+  "especie": "Perro",
+  "tipoServicio": "Consulta general",
+  "fechaHora": "fecha-invalida",
+  "precioBase": 0
+}
+
+### 8) POST con JSON mal formado -> 400
+POST {{url}}
+Content-Type: application/json
+
+{"nombreCliente": "JSON incompleto"
+
+### 9) Ruta inexistente -> 404
+GET http://localhost:3000/api/ruta-inexistente
