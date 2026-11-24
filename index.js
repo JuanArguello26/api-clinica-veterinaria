@@ -31,6 +31,10 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Error interno del servidor' });
 });
 
-app.listen(PORT, () => {
-  console.log(`🐾 API Clínica Veterinaria escuchando en http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`🐾 API Clínica Veterinaria escuchando en http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
