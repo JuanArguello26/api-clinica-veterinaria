@@ -25,7 +25,7 @@ function calcularTotalPagar(precioBase, prioritario) {
 }
 
 function obtenerTodos() {
-  return turnos;
+  return [...turnos];
 }
 
 function obtenerPorId(id) {
